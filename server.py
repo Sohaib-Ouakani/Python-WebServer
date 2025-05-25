@@ -56,7 +56,7 @@ def read_file(path):
 
 def create_response(statuscode, mimetype, filesize, content):
     response = f"HTTP/1.1 {statuscode}\r\nContent-Type: {mimetype}\r\nContent-Length: {filesize}\r\n\r\n".encode(
-            'utf-8') + content
+            'ascii') + content
     return response
 
 def server_reply(filepath):
@@ -89,7 +89,7 @@ def server_reply(filepath):
 def handle_request(client_socket, client_ip):
     start = time.time()
 
-    request = client_socket.recv(1024).decode('utf-8')
+    request = client_socket.recv(1024).decode('ascii')
 
     path, method, filepath = parse_request(request)
     if not path:
