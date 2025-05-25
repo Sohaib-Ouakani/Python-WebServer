@@ -1,0 +1,243 @@
+body {
+    background: linear-gradient(to bottom right, #e0f7fa, #a5d6a7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    animation: fadeInPage 0.8s ease-in-out;
+}
+
+.navbar {
+    background-color: #4caf50;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDownNavbar 0.5s ease-out;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #c8e6c9;
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 850px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: slideUpContent 0.7s ease-out 0.2s;
+    animation-fill-mode: backwards;
+}
+
+h1 {
+    color: #2e7d32;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #388e3c;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+ul {
+    list-style: disc;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #a5d6a7;
+    margin: 2.5rem 0;
+}
+
+.main-img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-error-img {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.cactus-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.cactus-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+}
+
+.cactus-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.cactus-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.cactus-card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.cactus-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDownNavbar {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUpContent {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+/* Tablet e schermi medi */
+@media (max-width: 900px) {
+    .container {
+        margin: 1.5rem auto;
+        padding: 1.5rem 2rem;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    .cactus-grid {
+        gap: 20px;
+    }
+    .cactus-card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* Smartphone */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar li {
+        margin: 8px 0;
+    }
+    .container {
+        margin: 1rem 0.5rem;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .main-img {
+        max-height: 300px;
+    }
+    .cactus-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cactus-card {
+        flex-basis: 100%;
+    }
+    ul {
+        padding-left: 1rem;
+    }
+}
