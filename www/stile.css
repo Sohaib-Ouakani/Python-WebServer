@@ -124,6 +124,11 @@ hr {
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+.main-error-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15)
+}
+
 .cactus-grid {
     display: flex;
     flex-wrap: wrap;
